@@ -1,0 +1,15 @@
+[Unit]
+Description=django4_template develop
+
+[Service]
+User=django4_template_django_template_user
+Restart=always
+RestartSec=5
+Nice=1
+SuccessExitStatus=0 1
+WorkingDirectory=/var/www/python/django4_template/
+ExecStart=/var/www/python/django4_template/venv/bin/uwsgi --ini django4_template/config/uwsgi/uwsgi.ini
+ExecStop=/var/www/python/django4_template/venv/bin/uwsgi --stop django4_template/config/uwsgi/django4_template.pid
+
+[Install]
+WantedBy=multi-user.target

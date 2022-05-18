@@ -1,0 +1,1 @@
+from django4_template.settings.settings_base import *

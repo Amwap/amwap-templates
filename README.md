@@ -1,1 +1,1 @@
-# amwap-templates
+# django4_template-templates
