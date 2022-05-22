@@ -1,0 +1,15 @@
+[Unit]
+Description=dajngo4_vue_template develop
+
+[Service]
+User=dajngo4_vue_template_django_template_user
+Restart=always
+RestartSec=5
+Nice=1
+SuccessExitStatus=0 1
+WorkingDirectory=/var/www/python/dajngo4_vue_template/
+ExecStart=/var/www/python/dajngo4_vue_template/venv/bin/uwsgi --ini dajngo4_vue_template/config/uwsgi/uwsgi.ini
+ExecStop=/var/www/python/dajngo4_vue_template/venv/bin/uwsgi --stop dajngo4_vue_template/config/uwsgi/dajngo4_vue_template.pid
+
+[Install]
+WantedBy=multi-user.target

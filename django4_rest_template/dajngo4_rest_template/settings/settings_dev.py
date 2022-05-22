@@ -1,0 +1,1 @@
+from dajngo4_rest_template.settings.settings_base import *

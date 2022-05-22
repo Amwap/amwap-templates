@@ -1,4 +1,4 @@
-"""mtg URL Configuration
+"""dajngo4_vue_template URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/

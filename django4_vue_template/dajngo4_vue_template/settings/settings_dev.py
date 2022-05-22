@@ -1,0 +1,1 @@
+from dajngo4_vue_template.settings.settings_base import *

@@ -1,1 +1,0 @@
-from mtg.settings.settings_base import *
