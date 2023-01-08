@@ -57,6 +57,4 @@ target/
 .ropeproject
 
 venv/
-.env.dev
-.env.prod
 .env*

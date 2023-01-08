@@ -1,0 +1,1 @@
+Just replace "ur_best_project_name" with ur best project name and use
