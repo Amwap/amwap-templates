@@ -36,6 +36,8 @@ go to psql (db volume)
 
 > docker-compose -f docker-compose.dev.yml exec web python manage.py migrate --noinput
 
+> docker-compose -f docker-compose.dev.yml exec web python manage.py collectstatic --noinput
+
 > docker-compose -f docker-compose.dev.yml logs -f
 
 ## Production
@@ -44,6 +46,8 @@ go to psql (db volume)
 > docker-compose -f docker-compose.prod.yml up -d --build
 
 > docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
+
+> docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --noinput
 
 > docker-compose -f docker-compose.prod.yml logs -f
 

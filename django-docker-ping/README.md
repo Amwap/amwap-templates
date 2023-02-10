@@ -1,4 +1,4 @@
-https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
+images from https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
 
 ```
 Ubuntu version: 22.04 (WSL also)
@@ -6,28 +6,14 @@ python version: 3.12
 postgresql version: 14
 ```
 
-# Base usage
+# postgres deploy
 
-build this container
-> docker-compose build
+### psql 
 
-run container
-> docker-compose up -d
+> CREATE ROLE hadiku WITH LOGIN ENCRYPTED PASSWORD 'pwd here';
+> CREATE DATABASE hadiku_db WITH OWNER hadiku;
 
-stop container
-> docker-compose down -v
-
-rebuild and run container
-> docker-compose up -d --build
-
-exec commands to dajngo (web volume)
-> docker-compose exec web python manage.py migrate --noinput
-
-go to psql (db volume)
-> docker-compose exec db psql --username=ur_best_project_name --dbname=ur_best_project_name_dev
-
-
-# Specific docker-compose
+# Docker
 
 ## Develop
 > docker-compose -f docker-compose.dev.yml down -v
@@ -41,7 +27,7 @@ go to psql (db volume)
 > docker-compose -f docker-compose.dev.yml logs -f
 
 ## Production
-> docker-compose -f docker-compose.prod.yml down -v
+> docker-compose -f docker-compose.prod.yml down -v 
 
 > docker-compose -f docker-compose.prod.yml up -d --build
 
@@ -51,3 +37,7 @@ go to psql (db volume)
 
 > docker-compose -f docker-compose.prod.yml logs -f
 
+
+
+
+GIT_SSH_COMMAND="ssh -i ~/.ssh/hadiku" git push
