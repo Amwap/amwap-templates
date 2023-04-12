@@ -58,3 +58,8 @@ target/
 
 venv/
 .env*
+
+.env.prod
+.env.prod.db
+.env.dev
+.env.dev.db
